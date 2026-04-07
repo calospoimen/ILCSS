@@ -62,19 +62,19 @@ literature/
 ```
 function ilcss_sim(s1, s2):
     remove spaces from s1, s2
-    total_len = len(s1) + len(s2)
+    L = max(len(s1), len(s2))
     score = 0
     loop:
         block = longest_common_substring(s1, s2)
         if len(block) < 3: break
         pos1 = s1.find(block)
         pos2 = s2.find(block)
-        r_len = len(block) / (total_len / 2)
-        r_dist = |pos1 - pos2| / (total_len / 2)
+        r_len     = len(block) / L
+        r_dist    = |pos1 - pos2| / L
         r_penalty = r_dist * (1 - r_len)
-        score += r_len * (1 - r_penalty)
+        score    += len(block) * (1 - r_penalty)
         mask block in s1 and s2
-    return score / (score + 1)   # normalise to [0, 1)
+    return score / L             # normalise to [0, 1]
 ```
 
 Recommended matching threshold: **0.40**
