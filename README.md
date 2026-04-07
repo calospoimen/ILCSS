@@ -117,10 +117,3 @@ Datasets:
 - DBLP-ACM: CC BY 4.0 — Köpcke et al., Leipzig University
 - FEBRL: BSD-3-Clause — Christen & Goiser
 
----
-
-## Author
-
-Raoul Sotero Calao
-Chief Commissioner, Italian National Police — Central Anticrime Directorate
-raoulsotero.calao@poliziadistato.it | rscalao@gmail.com
